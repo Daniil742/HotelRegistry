@@ -1,0 +1,31 @@
+﻿@model IEnumerable<HotelRegistry.Models.Hotel>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Реестр отелей</title>
+</head>
+<body>
+    <h3>Отели</h3>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Адрес</td>
+        </tr>
+        @foreach (var hotel in Model)
+            {
+            <tr>
+                <td>@hotel.Name</td>
+                <td>@hotel.Address</td>
+                <td><a href="~/Home/Details/@hotel.Id">Подробнее</a></td>
+                <td><a href="~/Home/Change/@hotel.Id">Изменить</a></td>
+                <td><a href="~/Home/Delete/@hotel.Id">Удалить</a></td>
+            </tr>
+        }
+    </table>
+    <a href="~/Home/CreateNew">Добавить</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница редактирования</title>
+</head>
+<body>
+    <div>
+        <h3>Форма редактирования</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <table>
+                <tr>
+                    <td>Название:</td>
+                    <td><input type="text" name="Name" /> </td>
+                </tr>
+                <tr>
+                    <td>Адрес:</td>
+                    <td><input type="text" name="Address" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Сохранить изменения" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
